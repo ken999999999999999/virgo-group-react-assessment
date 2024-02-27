@@ -2,32 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+[class*="-wrapper"] {
+  font-weight: lighter;
+}
+[class*="-wrapper-checked"] {
+  font-weight: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.ant-checkbox-inner {
+  border-radius: 10px !important;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+[class*="-inner"]::after {
+  display: none !important;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+[class*="-checked"][class*="-disabled"] span[class*="-inner"] {
+  background-color: #d8d8d8 !important;
+}
+
+[class*="-wrapper-checked"] {
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+.ant-checkbox-disabled + span {
+  color: inherit !important;
 }
