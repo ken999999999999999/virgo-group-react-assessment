@@ -23,6 +23,9 @@
   background-color: #d8d8d8 !important;
 }
 
+span[class*="-inner"] {
+  transform: scale(0.75);
+}
 [class*="-wrapper-checked"] {
   color: rgba(0, 0, 0, 0.88) !important;
 }
@@ -46,8 +49,14 @@
 .sub-label .ant-form-item-label > label {
   font-weight: lighter;
   color: #979797 !important;
+  font-size: 16px !important;
 }
 
 .ant-layout-content {
   min-height: 100vh !important;
+}
+
+.ant-btn-primary:disabled {
+  background: #d4ccf7 !important;
+  color: #fff !important;
 }

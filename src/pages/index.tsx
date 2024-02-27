@@ -60,7 +60,7 @@ export default function Home() {
         </Form.Item>
 
         <div className="text-center">
-          <Button htmlType="submit" size="large" className="w-52 px-2">
+          <Button htmlType="submit" size="large" className="w-52">
             Process
           </Button>
         </div>
