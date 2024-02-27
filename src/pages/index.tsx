@@ -1,6 +1,7 @@
 import { data } from "@/common/data"
 import { Button, RadioGroup } from "@/components"
-import { Card, Checkbox, Col, Form, Row, Switch, Typography } from "antd"
+import CheckboxGroup from "@/components/CheckboxGroup"
+import { Card, Form, Switch, Typography } from "antd"
 import { useState } from "react"
 
 const boolOptions: OptionType[] = [
@@ -48,16 +49,14 @@ export default function Home() {
         >
           <RadioGroup options={boolOptions} />
         </Form.Item>
-        <Form.Item name="toolsUsed" label="Which tools do you use?">
-          <Checkbox.Group>
-            <Row gutter={[8, 12]}>
-              {toolOptions.map((option) => (
-                <Col key={option.value + ""} span={24}>
-                  <Checkbox value={option.value}>{option.label}</Checkbox>
-                </Col>
-              ))}
-            </Row>
-          </Checkbox.Group>
+        <Form.Item label="Which tools do you use?">
+          <Form.Item
+            name="toolsUsed"
+            label="Please select all that apply."
+            className="sub-label"
+          >
+            <CheckboxGroup options={toolOptions} />
+          </Form.Item>
         </Form.Item>
 
         <div className="text-center">
