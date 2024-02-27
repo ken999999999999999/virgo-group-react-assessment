@@ -1,7 +1,9 @@
-import { Button as AntdButton } from "antd"
+import { Button as AntdButton, ButtonProps } from "antd"
 
-export const Button = (): JSX.Element => {
-  return <AntdButton></AntdButton>
+interface IButton extends ButtonProps {}
+
+export const Button = ({ ...rest }: IButton): JSX.Element => {
+  return <AntdButton shape="round" size="large" type="primary" {...rest} />
 }
 
 export default Button

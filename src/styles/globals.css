@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 [class*="-wrapper"] {
-  font-weight: lighter;
+  color: #979797 !important;
 }
+
 [class*="-wrapper-checked"] {
-  font-weight: normal;
+  color: #000000;
 }
 
 .ant-checkbox-inner {
@@ -27,4 +28,20 @@
 
 .ant-checkbox-disabled + span {
   color: inherit !important;
+}
+
+.ant-switch-checked > .ant-switch-handle::before {
+  background-color: #fff !important;
+}
+
+.ant-switch:not(.ant-switch-checked) {
+  background-color: #fff !important;
+  outline: 3px solid #d4ccf7 !important;
+}
+.ant-form-item-label > label {
+  font-weight: 600;
+}
+
+.ant-layout-content {
+  min-height: 100vh !important;
 }
